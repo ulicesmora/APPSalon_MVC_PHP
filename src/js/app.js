@@ -113,7 +113,7 @@ function paginaSiguiente() {
 async function consultarAPI() {
 
     try {
-        const url = `${location.origin}/api/servicios`;//en caso de que el backend y los archivos js, queden en el mismo dominio, se puede dejar solo /api/servicios 
+        const url = '/api/servicios';//en caso de que el backend y los archivos js, queden en el mismo dominio, se puede dejar solo /api/servicios 
         const resultado = await fetch(url);
         const servicios = await resultado.json();
         mostrarServicios(servicios);
